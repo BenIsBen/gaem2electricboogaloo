@@ -3,8 +3,8 @@ import java.awt.Color;
 import java.util.Random;
 public class Player extends GameObject{
     Random r = new Random();
-    public Player(int x, int y, ID id){
-        super(x, y, id);
+    public Player(int x, int y, ID id, Boolean vis){
+        super(x, y, id, vis);
 
     }
     public void tick(){

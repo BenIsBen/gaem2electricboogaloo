@@ -15,7 +15,12 @@ public class Game extends Canvas implements Runnable{
         this.addKeyListener(new KeyInput(handler));
         new window(WIDTH, HEIGHT, "Play Time", this);
         r = new Random();
-        handler.addObject(new Player(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.Player));
+        handler.addObject(new Player(240, 240, ID.Player, true));
+        handler.addObject(new Wall(0,0,ID.Wall, 640, 20, true));
+        handler.addObject(new Wall(0,435,ID.Wall, 640, 20, true));
+        handler.addObject(new Wall(0,0,ID.Wall, 20, 480, true));
+        handler.addObject(new Wall(620,0,ID.Wall, 20, 150, true));
+        handler.addObject(new Wall(620,305,ID.Wall, 20, 150, true));
     }
 
     public synchronized void start(){

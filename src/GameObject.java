@@ -4,11 +4,13 @@ public abstract class GameObject {
     protected int x, y;
     protected ID id;
     protected int spdX, spdY;
+    Boolean isVis;
 
-    public GameObject(int x, int y, ID id){
+    public GameObject(int x, int y, ID id, Boolean vis){
         this.x = x;
         this.y = y;
         this.id = id;
+        this.isVis = vis;
     }
 
     public abstract void tick();
